@@ -23,4 +23,4 @@ If you want to do it from the start, you will have to:
   - You do this over and over until you reach your designated last window
 4) from here, we then run 'gmx grompp' command with the um.mdp file for each window
 5) then we submit the batch script to slurm
-6) once this is done, we have {...}_pullf.dat
+6) once this is done, we have example_pullf.dat files. This is what we push to WHAM
