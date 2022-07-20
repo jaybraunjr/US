@@ -13,3 +13,8 @@ Sometimes there are scripts that can be set up to initialize the windows (distan
 
 There are also scripts that are able to submit a bunch of slurm jobs as once. Since this is on CHPC, you are limited in the amount of jobs you submit (I think). You can go in manually and submit a few at a time.
 
+
+If you want to do it from the start, you will have to:
+1) run 'gmx distance -f full.xtc -s full.tpr -n leaflets.ndx -oav av.xvg -oxyz xyz.xvg -select 'com of group "prot" plus com of group "lower_leaflet"' -b 519000 -e 800000
+2) Extract numbers from the 'z' column of the output that are 0.1 nm in increments and capture the cytosol-full bound states. This can be done with a script, which I am working on for the future. If you want to also create a python script that does this, feel free to add.
+3) 
