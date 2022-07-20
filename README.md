@@ -17,4 +17,10 @@ There are also scripts that are able to submit a bunch of slurm jobs as once. Si
 If you want to do it from the start, you will have to:
 1) run 'gmx distance -f full.xtc -s full.tpr -n leaflets.ndx -oav av.xvg -oxyz xyz.xvg -select 'com of group "prot" plus com of group "lower_leaflet"' -b 519000 -e 800000
 2) Extract numbers from the 'z' column of the output that are 0.1 nm in increments and capture the cytosol-full bound states. This can be done with a script, which I am working on for the future. If you want to also create a python script that does this, feel free to add.
-3) 
+3) Now that we have the distances (20-30 windows hopfully, if you are just learning or testing you can do 10), we have to extract from the .xtc trajectory.
+  - for example, lets say the first frame we choose is at timestep 519400 on the full trajectory.
+  - this is done with 'gmx trjconv -f full.xtc -s full.tpr -b 519400 -dump 519400 -o 1.gro -n index.ndx', which creats a 1.gro file which is your first window. Again, I haven't created code to automate this (but I really should).
+  - You do this over and over until you reach your designated last window
+4) from here, we then run 'gmx grompp' command with the um.mdp file for each window
+5) then we submit the batch script to slurm
+6) once this is done, we have {...}_pullf.dat
