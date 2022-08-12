@@ -1,6 +1,11 @@
 # US
 Umbrella sampling pipeline (in development)
 
+To do:
+-[] automate inputs for slurm 
+-[] move_protein.py script. Needs to be cleaned up and instructions need to be made
+
+
 In this repository there are instructions and scripts to run steered-MD and impliment US on amino acids permiating membranes (bilayers and LD monolayers)
 
 # Steps
