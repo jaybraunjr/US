@@ -29,8 +29,10 @@ def read_dist(dist_file):
     ### some numbers turn negative for some reason, making them positive.
     ### system dependant!!!
     
-    for key, value in out_dict.items():
-        out_dict[key] = abs(value)
+    ### commenting out for now cause don't think makes a difference
+    
+#     for key, value in out_dict.items():
+#         out_dict[key] = abs(value)
     out = [(k,out_dict[k]) for k in keys]
     return out
 
