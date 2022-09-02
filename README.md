@@ -30,5 +30,8 @@ From here, we run it on CHPC or Expanse, or another HPC
 
 
 *** 
-# PLUMED
+# PLUMED & REUS
 
+For REUS we need to run the simulations in parallel so that the different replicas can attempt to exhange with eachother. 
+
+mpirun -np 15 gmx_mpi mdrun -s topol -multidir 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 -plumed ../plumed.dat -replex 200  -dlb yes
