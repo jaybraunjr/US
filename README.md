@@ -27,3 +27,8 @@ In this repository there are instructions and scripts to run steered-MD and impl
   - This outputs 1.tpr, 2.tpr, 3.tpr, .... n.tpr for the US simulations
 
 From here, we run it on CHPC or Expanse, or another HPC 
+
+
+*** 
+# PLUMED
+
